@@ -29,11 +29,11 @@ class ZenImages {
 
   // -- OnBoarding Texts
   static const String onboarding1 =
-      "assets/images/on_boarding_images/sammy-line-searching.gif";
+      "assets/images/on_boarding_images/onboarding1.gif";
   static const String onboarding2 =
-      "assets/images/on_boarding_images/sammy-line-shopping.gif";
+      "assets/images/on_boarding_images/onboarding2.gif";
   static const String onboarding3 =
-      "assets/images/on_boarding_images/sammy-line-delivery.gif";
+      "assets/images/on_boarding_images/onboarding2.gif";
 
   // -- Payment Methods
   static const String applePay = "assets/icons/payment_methods/apple-pay.png";

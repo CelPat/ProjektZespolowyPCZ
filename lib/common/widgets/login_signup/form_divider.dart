@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../../../utils/constants/colors.dart';
 import '../../../utils/helpers/helper_functions.dart';
 
-class GAFormDivider extends StatelessWidget {
-  const GAFormDivider({super.key, required this.dividerText});
+class ZenFormDivider extends StatelessWidget {
+  const ZenFormDivider({super.key, required this.dividerText});
 
   final String dividerText;
 

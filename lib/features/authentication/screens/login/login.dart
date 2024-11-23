@@ -26,19 +26,19 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               // Logo
-              const GALoginHeader(),
+              const ZenLoginHeader(),
 
               // Login Form
-              const GALoginForm(),
+              const ZenLoginForm(),
 
               // Divider
-              GAFormDivider(
+              ZenFormDivider(
                 dividerText: ZenTexts.orSignInWith.capitalize!,
               ),
               const SizedBox(height: ZenSizes.spaceBetweenSections),
 
               // Footer
-              const GASocialButtons()
+              const ZenSocialButtons()
             ],
           ),
         ),

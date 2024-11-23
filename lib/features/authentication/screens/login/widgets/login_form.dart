@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
 
-class GALoginForm extends StatelessWidget {
-  const GALoginForm({
+class ZenLoginForm extends StatelessWidget {
+  const ZenLoginForm({
     super.key,
   });
 

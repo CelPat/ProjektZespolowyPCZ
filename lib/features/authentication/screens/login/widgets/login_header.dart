@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../utils/constants/image_strings.dart';
 
-class GALoginHeader extends StatelessWidget {
-  const GALoginHeader({
+class ZenLoginHeader extends StatelessWidget {
+  const ZenLoginHeader({
     super.key,
   });
 

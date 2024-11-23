@@ -4,8 +4,8 @@ import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/sizes.dart';
 
-class GASocialButtons extends StatelessWidget {
-  const GASocialButtons({
+class ZenSocialButtons extends StatelessWidget {
+  const ZenSocialButtons({
     super.key,
   });
 
