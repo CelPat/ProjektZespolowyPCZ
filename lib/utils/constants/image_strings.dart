@@ -3,11 +3,7 @@
 /// This class contains all the App Images in String formats.
 class ZenImages {
   // -- App Logos
-  static const String appLogo = "";
-  static const String darkAppLogo =
-      "assets/logos/t-store-splash-logo-black.png";
-  static const String lightAppLogo =
-      "assets/logos/t-store-splash-logo-white.png";
+  static const String appLogo = "assets/logos/brain_meditation.png";
 
   // -- Social Logos
   static const String google = "assets/logos/google-icon.png";
@@ -29,11 +25,11 @@ class ZenImages {
 
   // -- OnBoarding Texts
   static const String onboarding1 =
-      "assets/images/on_boarding_images/onboarding1.gif";
+      "assets/images/on_boarding_images/brain.png";
   static const String onboarding2 =
-      "assets/images/on_boarding_images/onboarding2.gif";
+      "assets/images/on_boarding_images/brain-2.png";
   static const String onboarding3 =
-      "assets/images/on_boarding_images/onboarding2.gif";
+      "assets/images/on_boarding_images/brain-3.png";
 
   // -- Payment Methods
   static const String applePay = "assets/icons/payment_methods/apple-pay.png";
