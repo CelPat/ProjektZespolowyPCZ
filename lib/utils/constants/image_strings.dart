@@ -29,7 +29,7 @@ class ZenImages {
   static const String onboarding2 =
       "assets/images/on_boarding_images/brain-2.png";
   static const String onboarding3 =
-      "assets/images/on_boarding_images/brain-3.png";
+      "assets/images/on_boarding_images/brain-4.png";
 
   // -- Payment Methods
   static const String applePay = "assets/icons/payment_methods/apple-pay.png";
