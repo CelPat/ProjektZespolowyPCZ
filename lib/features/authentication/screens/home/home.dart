@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
+import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,16 +14,22 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(ZenImages.appLogo, fit: BoxFit.cover),
-                SizedBox(
-                  height: 50,
+                const SizedBox(
+                  height: ZenSizes.spaceBetweenSections,
                 ),
                 ElevatedButton(
                   onPressed: () {},
                   child: Text('medytacje'),
                 ),
+                const SizedBox(
+                  height: ZenSizes.spaceBetweenItems,
+                ),
                 ElevatedButton(
                   onPressed: () {},
                   child: Text('centrum pomocy'),
+                ),
+                const SizedBox(
+                  height: ZenSizes.spaceBetweenItems,
                 ),
                 ElevatedButton(
                   onPressed: () {},
