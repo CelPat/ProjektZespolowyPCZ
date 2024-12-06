@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:projekt_zespolowy_pcz/common/styles/spacing_styles.dart';
+import 'package:projekt_zespolowy_pcz/common/widgets/bottomNavigationBar.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
+import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,40 +12,50 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(ZenImages.appLogo, fit: BoxFit.cover),
-                const SizedBox(
-                  height: ZenSizes.spaceBetweenSections,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('medytacje'),
-                ),
-                const SizedBox(
-                  height: ZenSizes.spaceBetweenItems,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('centrum pomocy'),
-                ),
-                const SizedBox(
-                  height: ZenSizes.spaceBetweenItems,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('centrum wiedzy'),
-                ),
-              ]),
+          child: Padding(
+            padding: ZenSpacingStyle.paddingWithAppBarHeight,
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    height: 100,
+                    ZenImages.appLogo, 
+                    fit: BoxFit.cover
+                    ),
+                  const SizedBox(
+                    height: ZenSizes.spaceBetweenSections * 4,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(ZenTexts.meditationHomeButton),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: ZenSizes.spaceBetweenItems,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(ZenTexts.helpHomeButton),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: ZenSizes.spaceBetweenItems,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(ZenTexts.knowledgeHomeButton),
+                    ),
+                  ),
+                ]),
+          ),
         ),
         bottomNavigationBar:
-            BottomNavigationBar(items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person_2_outlined), label: 'Profile')
-        ]));
+            const bottomNavigationBar());
   }
 }

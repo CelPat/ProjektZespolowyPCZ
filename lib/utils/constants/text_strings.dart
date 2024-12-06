@@ -68,4 +68,11 @@ class ZenTexts {
   // -- Home
   static const String homeAppbarTitle = "Good day for shopping";
   static const String homeAppbarSubTitle = "Taimoor Sikander";
+
+  // -- Home Page Text
+
+  static const String meditationHomeButton = "Medytacja";
+  static const String helpHomeButton = "Strefa Pomocy";
+  static const String knowledgeHomeButton = "Baza Wiedzy";
+
 }
