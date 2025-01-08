@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
+import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,21 +20,21 @@ class HomePage extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text('medytacje'),
+                  child: const Text(ZenTexts.meditations),
                 ),
                 const SizedBox(
                   height: ZenSizes.spaceBetweenItems,
                 ),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text('centrum pomocy'),
+                  child: const Text(ZenTexts.helpCenter),
                 ),
                 const SizedBox(
                   height: ZenSizes.spaceBetweenItems,
                 ),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text('centrum wiedzy'),
+                  child: const Text(ZenTexts.knowledgeCenter),
                 ),
               ]),
         ),

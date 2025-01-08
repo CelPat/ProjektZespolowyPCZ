@@ -1,7 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import 'package:projekt_zespolowy_pcz/features/authentication/screens/signup/signup.dart';
+=======
+import 'package:get/get_core/src/get_main.dart';
+import 'package:projekt_zespolowy_pcz/features/authentication/screens/home/home.dart';
+>>>>>>> ac293054ee9e2488c4d4f5406f973786174e6633
 
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
@@ -53,7 +58,9 @@ class ZenLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: 
+                  () => Get.offAll(() => const HomePage())
+                ,
                 child: const Text(ZenTexts.signIn),
               ),
             ),

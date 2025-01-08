@@ -5,20 +5,20 @@ class ZenTexts {
   static const String skip = "Skip";
   static const String done = "Done";
   static const String submit = "Submit";
-  static const String appName = "T-Store";
+  static const String appName = "Zen Brain";
   static const String tContinue = "Continue";
 
   // -- OnBoarding Texts
-  static const String onBoardingTitle1 = "Choose your product";
-  static const String onBoardingTitle2 = "Select Payment Method";
-  static const String onBoardingTitle3 = "Deliver at your door step";
+  static const String onBoardingTitle1 = "Calm your mind";
+  static const String onBoardingTitle2 = "Train your brain";
+  static const String onBoardingTitle3 = "Free your brain to free your life";
 
   static const String onBoardingSubTitle1 =
-      "Welcome to a World of Limitless Choices - Your Perfect Product Awaits!";
+      "Welcome to ZenBrain - Place where you take control of your mind";
   static const String onBoardingSubTitle2 =
-      "For Seamless Transactions, Choose Your Payment Path - Your Convenience, Our Priority!";
+      "Be more effective, calm and confident";
   static const String onBoardingSubTitle3 =
-      "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
+      "Feel how your life change after only 1 week";
 
   // -- Authentication Forms
   static const String firstName = "First Name";
@@ -43,29 +43,28 @@ class ZenTexts {
 
   // -- Authentication Headings
   static const String loginTitle = "Welcome back,";
-  static const String loginSubTitle =
-      "Discover Limitless Choices and Unmatched Convenience.";
+  static const String loginSubTitle = "Let's take care of your mind.";
   static const String signupTitle = "Let’s create your account";
   static const String forgotPasswordTitle = "Forgot password";
   static const String forgotPasswordSubTitle =
-      "Don’t worry sometimes people can forget too, enter your email and we will send you a password reset link.";
+      "Enter your email and we will send you a password reset link.";
   static const String changeYourPasswordTitle = "Password Reset Email Sent";
   static const String changeYourPasswordSubTitle =
       "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
   static const String confirmEmail = "Verify your email address!";
   static const String confirmEmailSubTitle =
-      "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
+      "Congratulations! Your Account Awaits: Verify Your Email to start ZenBraining.";
   static const String emailNotReceivedMessage =
       "Didn’t get the email? Check your junk/spam or resend it.";
   static const String yourAccountCreatedTitle =
-      "Your account successfully created!";
+      "Your account was successfully created!";
   static const String yourAccountCreatedSubTitle =
-      "Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
-
-  // -- Product
-  static const String popularProducts = "Popular Products";
+      "Welcome to ZenBrain: Place where you take control of your mind";
 
   // -- Home
-  static const String homeAppbarTitle = "Good day for shopping";
-  static const String homeAppbarSubTitle = "Taimoor Sikander";
+  static const String homeAppbarTitle = "Let's take care of your mind.";
+  static const String homeAppbarSubTitle = "ZenBrain";
+  static const String meditations = "Meditations";
+  static const String helpCenter = "Help center";
+  static const String knowledgeCenter = "Knowledge center";
 }
