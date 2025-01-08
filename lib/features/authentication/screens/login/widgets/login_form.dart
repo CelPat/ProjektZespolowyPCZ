@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/home/home.dart';
-
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
+import '../../../../guided_meditations/screens/home/home.dart';
+import '../../signup/signup.dart';
 
 class ZenLoginForm extends StatelessWidget {
   const ZenLoginForm({
@@ -54,9 +53,7 @@ class ZenLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: 
-                  () => Get.offAll(() => const HomePage())
-                ,
+                onPressed: () => Get.offAll(() => const HomePage()),
                 child: const Text(ZenTexts.signIn),
               ),
             ),
@@ -66,7 +63,7 @@ class ZenLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const SignUpScreen()),
                 child: const Text(ZenTexts.createAccount),
               ),
             ),
