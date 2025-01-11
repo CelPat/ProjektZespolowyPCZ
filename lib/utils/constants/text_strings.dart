@@ -6,7 +6,7 @@ class ZenTexts {
   static const String done = "Done";
   static const String submit = "Submit";
   static const String appName = "Zen Brain";
-  static const String tContinue = "Continue";
+  static const String zenContinue = "Continue";
 
   // -- OnBoarding Texts
   static const String onBoardingTitle1 = "Calm your mind";
@@ -45,7 +45,7 @@ class ZenTexts {
   static const String loginTitle = "Welcome back,";
   static const String loginSubTitle = "Let's take care of your mind.";
   static const String signupTitle = "Let’s create your account";
-  static const String forgotPasswordTitle = "Forgot password";
+  static const String forgotPasswordTitle = "Forgot password?";
   static const String forgotPasswordSubTitle =
       "Enter your email and we will send you a password reset link.";
   static const String changeYourPasswordTitle = "Password Reset Email Sent";
