@@ -78,13 +78,7 @@ class SignupForm extends StatelessWidget {
             child: ElevatedButton(
                 onPressed: () {
                   if (controller.validateFields()) {
-                    Get.to(() => const VerifyEmailScreen());
-                  } else {
-                    Get.snackbar(
-                      "Error",
-                      "You need to enter all the fields.",
-                      snackPosition: SnackPosition.TOP,
-                    );
+                    Get.to(() => VerifyEmailScreen());
                   }
                 },
                 child: const Text(ZenTexts.createAccount)),
