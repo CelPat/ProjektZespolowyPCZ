@@ -27,6 +27,11 @@ class SignupController extends GetxController {
 
     if (firstNameController.text.trim().isEmpty ||
         lastNameController.text.trim().isEmpty) {
+      Get.snackbar(
+        "Error",
+        "You need to enter all the fields.",
+        snackPosition: SnackPosition.TOP,
+      );
       return false;
     }
     return true;
