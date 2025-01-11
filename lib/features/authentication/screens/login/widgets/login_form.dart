@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+<<<<<<< Updated upstream
 import 'package:projekt_zespolowy_pcz/features/authentication/screens/password_config/forgot_password.dart';
+=======
+<<<<<<< Updated upstream
+=======
+import 'package:projekt_zespolowy_pcz/features/authentication/screens/password_config/forgot_password.dart';
+import 'package:projekt_zespolowy_pcz/navigation_menu.dart';
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 import '../../../../../common/widgets/login_signup/password_field.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
-import '../../../../guided_meditations/screens/home/home.dart';
 import '../../../controllers/password_controller.dart';
 import '../../signup/signup.dart';
 
@@ -55,7 +62,7 @@ class ZenLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => Get.offAll(() => const HomePage()),
+                onPressed: () => Get.offAll(() => const NavigationMenu()),
                 child: const Text(ZenTexts.signIn),
               ),
             ),
