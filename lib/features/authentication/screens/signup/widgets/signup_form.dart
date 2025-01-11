@@ -78,7 +78,8 @@ class SignupForm extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
                 onPressed: () {
-                  if (signUpController.validateFields()) {
+                  if (signUpController.validateFields(
+                      passwordTextController: passwordTextController)) {
                     Get.to(() => const VerifyEmailScreen());
                   }
                 },
