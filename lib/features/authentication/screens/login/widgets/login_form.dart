@@ -63,7 +63,7 @@ class ZenLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () => Get.to(() => const SignUpScreen()),
+                onPressed: () => Get.to(() => SignUpScreen()),
                 child: const Text(ZenTexts.createAccount),
               ),
             ),

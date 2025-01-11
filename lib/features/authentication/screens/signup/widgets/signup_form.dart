@@ -6,12 +6,18 @@ import 'package:projekt_zespolowy_pcz/features/authentication/screens/signup/ver
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
+import '../../../controllers/password_controller.dart';
+
 class SignupForm extends StatelessWidget {
-  final SignupController controller = Get.put(SignupController());
-  SignupForm({super.key});
+  final SignupController signUpController = Get.put(SignupController());
+  final TextEditingController passwordController;
+  SignupForm({super.key, required this.passwordController});
 
   @override
   Widget build(BuildContext context) {
+    final PasswordVisibilityController passwordVisibilityController =
+        Get.put(PasswordVisibilityController());
+
     return Form(
       child: Column(
         children: [
@@ -20,7 +26,7 @@ class SignupForm extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: TextFormField(
-                  controller: controller.firstNameController,
+                  controller: signUpController.firstNameController,
                   expands: false,
                   decoration: const InputDecoration(
                       labelText: ZenTexts.firstName,
@@ -33,7 +39,7 @@ class SignupForm extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: TextFormField(
-                  controller: controller.lastNameController,
+                  controller: signUpController.lastNameController,
                   expands: false,
                   decoration: const InputDecoration(
                       labelText: ZenTexts.lastName,
@@ -48,7 +54,7 @@ class SignupForm extends StatelessWidget {
 
           //Email
           TextFormField(
-            controller: controller.emailController,
+            controller: signUpController.emailController,
             expands: false,
             decoration: const InputDecoration(
                 labelText: ZenTexts.email, prefixIcon: Icon(Icons.email)),
@@ -59,12 +65,31 @@ class SignupForm extends StatelessWidget {
           ),
 
           //Password
-          TextFormField(
-            controller: controller.passwordController,
-            expands: false,
-            decoration: const InputDecoration(
-                labelText: ZenTexts.password,
-                prefixIcon: Icon(CupertinoIcons.eye_slash)),
+          // TextFormField(
+          //   obscureText: true,
+          //   controller: signUpController.passwordController,
+          //   expands: false,
+          //   decoration: const InputDecoration(
+          //       labelText: ZenTexts.password,
+          //       prefixIcon: Icon(CupertinoIcons.eye_slash)),
+          // ),
+
+          Obx(
+            () => TextFormField(
+              obscureText: passwordVisibilityController.obscureText,
+              controller: passwordController,
+              decoration: InputDecoration(
+                labelText: 'Password',
+                prefixIcon: GestureDetector(
+                  onTap: passwordVisibilityController.togglePasswordVisibility,
+                  child: Icon(
+                    passwordVisibilityController.isPasswordVisible.value
+                        ? CupertinoIcons.eye
+                        : CupertinoIcons.eye_slash,
+                  ),
+                ),
+              ),
+            ),
           ),
 
           const SizedBox(
@@ -77,6 +102,7 @@ class SignupForm extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
                 onPressed: () {
+<<<<<<< HEAD
                   if (controller.validateFields()) {
                     Get.to(() => const VerifyEmailScreen());
                   } else {
@@ -85,6 +111,10 @@ class SignupForm extends StatelessWidget {
                       "You need to enter all the fields.",
                       snackPosition: SnackPosition.TOP,
                     );
+=======
+                  if (signUpController.validateFields()) {
+                    Get.to(() => const VerifyEmailScreen());
+>>>>>>> d69244f (Create password controller. Change default password visibility to obscure and add option to show the password by pressing the prefixIcon)
                   }
                 },
                 child: const Text(ZenTexts.createAccount)),

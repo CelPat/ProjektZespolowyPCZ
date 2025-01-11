@@ -7,7 +7,8 @@ import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+  final TextEditingController passwordController = TextEditingController();
+  SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,9 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(height: ZenSizes.spaceBetweenSections),
 
               //Form
-              SignupForm(),
+              SignupForm(
+                passwordController: passwordController,
+              ),
 
               const SizedBox(height: ZenSizes.spaceBetweenSections),
 
