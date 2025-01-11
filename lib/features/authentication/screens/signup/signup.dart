@@ -25,7 +25,7 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(height: ZenSizes.spaceBetweenSections),
 
               //Form
-              const SignupForm(),
+              SignupForm(),
 
               const SizedBox(height: ZenSizes.spaceBetweenSections),
 
@@ -36,6 +36,8 @@ class SignUpScreen extends StatelessWidget {
 
               //Social buttons
               const ZenSocialButtons(),
+
+              const SizedBox(height: ZenSizes.spaceBetweenSections),
             ],
           ),
         ),

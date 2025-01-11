@@ -1,10 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:projekt_zespolowy_pcz/features/authentication/controllers/signup_controller.dart';
+import 'package:projekt_zespolowy_pcz/features/authentication/screens/signup/verify_email.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
 class SignupForm extends StatelessWidget {
-  const SignupForm({super.key});
+  final SignupController controller = Get.put(SignupController());
+  SignupForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +20,7 @@ class SignupForm extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: TextFormField(
+                  controller: controller.firstNameController,
                   expands: false,
                   decoration: const InputDecoration(
                       labelText: ZenTexts.firstName,
@@ -28,6 +33,7 @@ class SignupForm extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: TextFormField(
+                  controller: controller.lastNameController,
                   expands: false,
                   decoration: const InputDecoration(
                       labelText: ZenTexts.lastName,
@@ -42,6 +48,7 @@ class SignupForm extends StatelessWidget {
 
           //Email
           TextFormField(
+            controller: controller.emailController,
             expands: false,
             decoration: const InputDecoration(
                 labelText: ZenTexts.email, prefixIcon: Icon(Icons.email)),
@@ -53,6 +60,7 @@ class SignupForm extends StatelessWidget {
 
           //Password
           TextFormField(
+            controller: controller.passwordController,
             expands: false,
             decoration: const InputDecoration(
                 labelText: ZenTexts.password,
@@ -65,11 +73,21 @@ class SignupForm extends StatelessWidget {
 
           //Sign up Button
 
-          //TODO: Implement OnPressed to go to verify email page
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-                onPressed: () {}, child: const Text(ZenTexts.createAccount)),
+                onPressed: () {
+                  if (controller.validateFields()) {
+                    Get.to(() => const VerifyEmailScreen());
+                  } else {
+                    Get.snackbar(
+                      "Error",
+                      "You need to enter all the fields.",
+                      snackPosition: SnackPosition.TOP,
+                    );
+                  }
+                },
+                child: const Text(ZenTexts.createAccount)),
           )
         ],
       ),
