@@ -6,9 +6,9 @@ class SignupController extends GetxController {
   var firstNameController = TextEditingController();
   var lastNameController = TextEditingController();
   var emailController = TextEditingController();
-  var passwordController = TextEditingController();
+  late TextEditingController passwordTextController;
 
-  bool validateFields() {
+  bool validateFields({required passwordTextController}) {
     String? emailError =
         ZenValidator.validateEmail(emailController.text.trim());
     if (emailError != null) {
@@ -18,7 +18,7 @@ class SignupController extends GetxController {
     }
 
     String? passwordError =
-        ZenValidator.validatePassword(passwordController.text.trim());
+        ZenValidator.validatePassword(passwordTextController.text.trim());
     if (passwordError != null) {
       Get.snackbar('Validation Error', passwordError,
           snackPosition: SnackPosition.TOP);
@@ -43,7 +43,7 @@ class SignupController extends GetxController {
     firstNameController.dispose();
     lastNameController.dispose();
     emailController.dispose();
-    passwordController.dispose();
+    passwordTextController.dispose();
     super.onClose();
   }
 }
