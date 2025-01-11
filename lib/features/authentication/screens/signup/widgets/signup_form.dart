@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:projekt_zespolowy_pcz/common/widgets/login_signup/password_field.dart';
 import 'package:projekt_zespolowy_pcz/features/authentication/controllers/signup_controller.dart';
 import 'package:projekt_zespolowy_pcz/features/authentication/screens/signup/verify_email.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
@@ -10,8 +11,8 @@ import '../../../controllers/password_controller.dart';
 
 class SignupForm extends StatelessWidget {
   final SignupController signUpController = Get.put(SignupController());
-  final TextEditingController passwordController;
-  SignupForm({super.key, required this.passwordController});
+  final TextEditingController passwordTextController;
+  SignupForm({super.key, required this.passwordTextController});
 
   @override
   Widget build(BuildContext context) {
@@ -64,33 +65,27 @@ class SignupForm extends StatelessWidget {
             height: ZenSizes.spaceBetweenInputFields,
           ),
 
-          //Password
-          // TextFormField(
-          //   obscureText: true,
-          //   controller: signUpController.passwordController,
-          //   expands: false,
-          //   decoration: const InputDecoration(
-          //       labelText: ZenTexts.password,
-          //       prefixIcon: Icon(CupertinoIcons.eye_slash)),
-          // ),
+          PasswordField(
+              passwordVisibilityController: passwordVisibilityController,
+              passwordController: passwordTextController),
 
-          Obx(
-            () => TextFormField(
-              obscureText: passwordVisibilityController.obscureText,
-              controller: passwordController,
-              decoration: InputDecoration(
-                labelText: 'Password',
-                prefixIcon: GestureDetector(
-                  onTap: passwordVisibilityController.togglePasswordVisibility,
-                  child: Icon(
-                    passwordVisibilityController.isPasswordVisible.value
-                        ? CupertinoIcons.eye
-                        : CupertinoIcons.eye_slash,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          // Obx(
+          //   () => TextFormField(
+          //     obscureText: passwordVisibilityController.obscureText,
+          //     controller: passwordTextController,
+          //     decoration: InputDecoration(
+          //       labelText: 'Password',
+          //       prefixIcon: GestureDetector(
+          //         onTap: passwordVisibilityController.togglePasswordVisibility,
+          //         child: Icon(
+          //           passwordVisibilityController.isPasswordVisible.value
+          //               ? CupertinoIcons.eye
+          //               : CupertinoIcons.eye_slash,
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
 
           const SizedBox(
             height: ZenSizes.spaceBetweenInputFields,

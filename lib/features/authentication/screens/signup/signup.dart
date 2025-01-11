@@ -27,7 +27,7 @@ class SignUpScreen extends StatelessWidget {
 
               //Form
               SignupForm(
-                passwordController: passwordController,
+                passwordTextController: passwordController,
               ),
 
               const SizedBox(height: ZenSizes.spaceBetweenSections),
