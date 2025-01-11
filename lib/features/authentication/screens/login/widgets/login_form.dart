@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:projekt_zespolowy_pcz/features/authentication/screens/password_config/forgot_password.dart';
 import '../../../../../common/widgets/login_signup/password_field.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
@@ -29,7 +30,6 @@ class ZenLoginForm extends StatelessWidget {
             const SizedBox(height: ZenSizes.spaceBetweenInputFields),
 
             // Password
-
             PasswordField(
                 passwordVisibilityController: passwordVisibilityController,
                 passwordController: passwordTextController),
@@ -45,7 +45,7 @@ class ZenLoginForm extends StatelessWidget {
 
                 // Forgot Password
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => ForgotPassword()),
                     child: const Text(ZenTexts.forgotPassword)),
               ],
             ),
