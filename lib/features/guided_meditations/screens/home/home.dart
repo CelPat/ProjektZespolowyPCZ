@@ -9,41 +9,35 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(ZenImages.appLogo, fit: BoxFit.cover),
-                const SizedBox(
-                  height: ZenSizes.spaceBetweenSections,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(ZenTexts.meditations),
-                ),
-                const SizedBox(
-                  height: ZenSizes.spaceBetweenItems,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(ZenTexts.helpCenter),
-                ),
-                const SizedBox(
-                  height: ZenSizes.spaceBetweenItems,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(ZenTexts.knowledgeCenter),
-                ),
-              ]),
-        ),
-        bottomNavigationBar:
-            BottomNavigationBar(items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person_2_outlined), label: 'Profile')
-        ]));
+      body: Center(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(ZenImages.appLogo, fit: BoxFit.cover),
+              const SizedBox(
+                height: ZenSizes.spaceBetweenSections,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text(ZenTexts.meditations),
+              ),
+              const SizedBox(
+                height: ZenSizes.spaceBetweenItems,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text(ZenTexts.helpCenter),
+              ),
+              const SizedBox(
+                height: ZenSizes.spaceBetweenItems,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text(ZenTexts.knowledgeCenter),
+              ),
+            ]),
+      ),
+    );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/password_confi/reset_password.dart';
+import 'package:projekt_zespolowy_pcz/features/authentication/screens/password_config/reset_password.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/validators/validation.dart';
