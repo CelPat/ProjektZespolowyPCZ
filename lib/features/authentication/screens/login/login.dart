@@ -12,8 +12,8 @@ import 'widgets/login_header.dart';
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
-  final usernameController = TextEditingController();
-  final passwordController = TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   void signUserIn() {}
 
@@ -29,7 +29,9 @@ class LoginPage extends StatelessWidget {
               const ZenLoginHeader(),
 
               // Login Form
-              const ZenLoginForm(),
+              ZenLoginForm(
+                passwordTextController: passwordController,
+              ),
 
               // Divider
               ZenFormDivider(

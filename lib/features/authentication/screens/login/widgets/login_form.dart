@@ -1,18 +1,20 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../../../common/widgets/login_signup/password_field.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
 import '../../../../guided_meditations/screens/home/home.dart';
+import '../../../controllers/password_controller.dart';
 import '../../signup/signup.dart';
 
 class ZenLoginForm extends StatelessWidget {
-  const ZenLoginForm({
-    super.key,
-  });
+  final TextEditingController passwordTextController;
+  const ZenLoginForm({super.key, required this.passwordTextController});
 
   @override
   Widget build(BuildContext context) {
+    final PasswordVisibilityController passwordVisibilityController =
+        Get.put(PasswordVisibilityController());
     return Form(
       child: Padding(
         padding:
@@ -27,11 +29,11 @@ class ZenLoginForm extends StatelessWidget {
             const SizedBox(height: ZenSizes.spaceBetweenInputFields),
 
             // Password
-            TextFormField(
-              decoration: const InputDecoration(
-                  labelText: ZenTexts.password,
-                  suffixIcon: Icon(CupertinoIcons.eye_slash_fill)),
-            ),
+
+            PasswordField(
+                passwordVisibilityController: passwordVisibilityController,
+                passwordController: passwordTextController),
+
             const SizedBox(height: ZenSizes.spaceBetweenInputFields / 2),
 
             Row(
@@ -63,7 +65,7 @@ class ZenLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () => Get.to(() => const SignUpScreen()),
+                onPressed: () => Get.to(() => SignUpScreen()),
                 child: const Text(ZenTexts.createAccount),
               ),
             ),
