@@ -20,4 +20,8 @@ class ZenImages {
       "assets/images/on_boarding_images/brain-2.png";
   static const String onboarding3 =
       "assets/images/on_boarding_images/brain-4.png";
+
+  // -- Animations
+  static const String helpCenterAnimation =
+      "assets/images/animations/doubt.gif";
 }

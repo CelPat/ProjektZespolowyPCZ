@@ -67,4 +67,31 @@ class ZenTexts {
   static const String meditations = "Meditations";
   static const String helpCenter = "Help center";
   static const String knowledgeCenter = "Knowledge center";
+
+  // -- Home Page Text
+
+  static const String meditationHomeButton = "Medytacja";
+  static const String helpHomeButton = "Strefa Pomocy";
+  static const String knowledgeHomeButton = "Baza Wiedzy";
+
+  // -- Help Center Page Buttons Texts
+  static const String firstCallName = "Dziecięcy Telefon Zaufania";
+  static const String secondCallName =
+      "Telefon Zaufania dla Dzieci i Młodzieży";
+  static const String thirdCallName =
+      "Telefon i chat zaufania dla dzieci i młodzieży";
+  static const String fourthCallName =
+      "Kryzysowy telefon zaufania Instytut PZPTP";
+  static const String fifthCallName = "Niebieska linia";
+
+  // -- Help Center -> Dziecięcy Telefon Zaufania
+  static const String dzieciecyTelefonZaufaniaTitle =
+      "Dziecięcy Telefon Zaufania Rzecznik Praw Dziecka";
+  static const String telefonZaufaniaDzieciIMlodziezTitle =
+      "Telefon Zaufania dla Dzieci i Młodzieży - Fundacja Dajemy Dzieciom Siłę";
+  static const String telefonChatDzieciIMlodziezTitle =
+      "Telefon i chat zaufania dla dzieci i młodzieży - Towarzystwo Przyjaciół Dzieci";
+  static const String kryzysowyTelefonZaufaniaTitle =
+      "Kryzysowy telefon zaufania Instytut Psychologii Zdrowia Polskiego Towarzystwa Psychologicznego";
+  static const String niebieskaLiniaTitle = "Niebieska Linia";
 }
