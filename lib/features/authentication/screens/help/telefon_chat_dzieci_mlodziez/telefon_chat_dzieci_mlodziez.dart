@@ -18,7 +18,8 @@ class TelefonChatDzieciMlodziez extends StatelessWidget {
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(child: Text(ZenTexts.dzieciecyTelefonZaufaniaTitle)),
+            const SizedBox(
+                child: Text(ZenTexts.telefonChatDzieciIMlodziezTitle)),
             const SizedBox(
               height: ZenSizes.spaceBetweenItems,
             ),

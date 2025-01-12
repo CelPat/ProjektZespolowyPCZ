@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/help.dart';
 import 'package:projekt_zespolowy_pcz/features/guided_meditations/screens/home/home.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/colors.dart';
 import 'package:projekt_zespolowy_pcz/utils/helpers/helper_functions.dart';
@@ -28,8 +29,9 @@ class NavigationMenu extends StatelessWidget {
               : Colors.black.withOpacity(0.1),
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
-            NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile')
-            // NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
+            NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
+            NavigationDestination(
+                icon: Icon(Icons.phone_enabled), label: 'Help center'),
           ],
         ),
       ),
@@ -45,6 +47,7 @@ class NavigationController extends GetxController {
     const HomePage(),
     Container(
       color: Colors.amberAccent,
-    )
+    ),
+    const HelpPage(),
   ];
 }

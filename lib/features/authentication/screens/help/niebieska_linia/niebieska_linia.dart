@@ -18,7 +18,7 @@ class NiebieskaLinia extends StatelessWidget {
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(child: Text(ZenTexts.dzieciecyTelefonZaufaniaTitle)),
+            const SizedBox(child: Text(ZenTexts.niebieskaLiniaTitle)),
             const SizedBox(
               height: ZenSizes.spaceBetweenItems,
             ),
