@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/help.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
@@ -26,7 +29,9 @@ class HomePage extends StatelessWidget {
                 height: ZenSizes.spaceBetweenItems,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(const HelpPage());
+                },
                 child: const Text(ZenTexts.helpCenter),
               ),
               const SizedBox(
