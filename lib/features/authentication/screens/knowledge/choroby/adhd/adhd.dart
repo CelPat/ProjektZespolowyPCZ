@@ -20,13 +20,13 @@ class AdhdPage extends StatelessWidget{
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(
+            SizedBox(
               height: ZenSizes.spaceBetweenItems,
             ),
-            const SizedBox(
+            SizedBox(
                 child: Text(
                     'ADHD to zaburzenie neurorozwojowe, które objawia się trudnościami z koncentracją, impulsywnością i nadmierną aktywnością. Może występować zarówno u dzieci, jak i dorosłych, wpływając na codzienne funkcjonowanie w szkole, pracy i relacjach międzyludzkich.')),
-            const SizedBox(
+            SizedBox(
               height: ZenSizes.spaceBetweenItems,
             )
             ],

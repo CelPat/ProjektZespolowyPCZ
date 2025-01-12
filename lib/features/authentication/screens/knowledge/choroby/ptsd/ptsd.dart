@@ -20,13 +20,13 @@ class PtsdPage extends StatelessWidget{
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(
+            SizedBox(
               height: ZenSizes.spaceBetweenItems,
             ),
-            const SizedBox(
+            SizedBox(
                 child: Text(
                     'PTSD występuje po przeżyciu traumatycznych wydarzeń, takich jak wypadki, przemoc lub katastrofy. Objawy obejmują natrętne wspomnienia, koszmary senne, unikanie bodźców przypominających traumę oraz nadmierną czujność.')),
-            const SizedBox(
+            SizedBox(
               height: ZenSizes.spaceBetweenItems,
             )
           ],

@@ -20,13 +20,13 @@ class DepressionPage extends StatelessWidget{
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(
+            SizedBox(
               height: ZenSizes.spaceBetweenItems,
             ),
-            const SizedBox(
+            SizedBox(
                 child: Text(
                     ' Depresja to jedno z najczęstszych zaburzeń psychicznych, objawiające się przewlekłym obniżeniem nastroju, utratą zainteresowań, brakiem energii, problemami z koncentracją i snem. Często towarzyszą jej myśli samobójcze. Depresja może być wynikiem czynników biologicznych, genetycznych, psychologicznych lub środowiskowych.')),
-            const SizedBox(
+            SizedBox(
               height: ZenSizes.spaceBetweenItems,
             )
           ],

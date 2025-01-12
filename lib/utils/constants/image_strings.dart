@@ -24,4 +24,7 @@ class ZenImages {
   // -- Animations
   static const String helpCenterAnimation =
       "assets/images/animations/doubt.gif";
+
+  static const String knowledgeCenterAnimation =
+      "assets/images/animations/brain.gif";
 }

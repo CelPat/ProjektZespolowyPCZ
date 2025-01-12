@@ -35,7 +35,7 @@ class KnowledgePage extends StatelessWidget{
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(DepressionPage());
+                    Get.to(const DepressionPage());
                   },
                   child: const Text(ZenTexts.depresionButtonName),
                 ),
@@ -47,7 +47,7 @@ class KnowledgePage extends StatelessWidget{
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(AnxietyPage());
+                    Get.to(const AnxietyPage());
                   },
                   child: const Text(ZenTexts.anxietyButtonName),
                 ),
@@ -59,7 +59,7 @@ class KnowledgePage extends StatelessWidget{
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(PtsdPage());
+                    Get.to(const PtsdPage());
                   },
                   child: const Text(ZenTexts.ptsdButtonName),
                 ),
@@ -71,7 +71,7 @@ class KnowledgePage extends StatelessWidget{
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(AdhdPage());
+                    Get.to(const AdhdPage());
                   },
                   child: const Text(ZenTexts.adhdButtonName),
                 ),
@@ -83,7 +83,7 @@ class KnowledgePage extends StatelessWidget{
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(OcdPage());
+                    Get.to(const OcdPage());
                   },
                   child: const Text(ZenTexts.ocdButtonName),
                 ),

@@ -20,13 +20,13 @@ class AnxietyPage extends StatelessWidget{
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(
+            SizedBox(
               height: ZenSizes.spaceBetweenItems,
             ),
-            const SizedBox(
+            SizedBox(
                 child: Text(
                     'Zaburzenia lękowe obejmują przewlekły niepokój, napady paniki, fobie społeczne i inne specyficzne lęki, które mogą znacznie utrudniać codzienne funkcjonowanie. Objawy obejmują szybkie bicie serca, nadmierne pocenie się, trudności w oddychaniu i uporczywe myśli lękowe.')),
-            const SizedBox(
+            SizedBox(
               height: ZenSizes.spaceBetweenItems,
             )
           ],
