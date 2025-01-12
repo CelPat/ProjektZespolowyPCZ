@@ -89,9 +89,9 @@ class ZenTexts {
       "Dziecięcy Telefon Zaufania Rzecznik Praw Dziecka";
   static const String telefonZaufaniaDzieciIMlodziezTitle =
       "Telefon Zaufania dla Dzieci i Młodzieży - Fundacja Dajemy Dzieciom Siłę";
-  static const String title3 =
+  static const String telefonChatDzieciIMlodziezTitle =
       "Telefon i chat zaufania dla dzieci i młodzieży - Towarzystwo Przyjaciół Dzieci";
-  static const String title4 =
+  static const String kryzysowyTelefonZaufaniaTitle =
       "Kryzysowy telefon zaufania Instytut Psychologii Zdrowia Polskiego Towarzystwa Psychologicznego";
-  static const String title5 = "Niebieska Linia";
+  static const String niebieskaLiniaTitle = "Niebieska Linia";
 }
