@@ -6,7 +6,9 @@ import 'package:projekt_zespolowy_pcz/features/authentication/screens/signup/wid
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
+/// Klasa reprezentująca ekran rejestracji w aplikacji.
 class SignUpScreen extends StatelessWidget {
+  // Kontroler tekstowy dla pola hasła
   final TextEditingController passwordController = TextEditingController();
   SignUpScreen({super.key});
 
@@ -22,24 +24,24 @@ class SignUpScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //Title
+              // Tytuł
               Text(ZenTexts.signupTitle,
                   style: Theme.of(context).textTheme.headlineMedium),
               const SizedBox(height: ZenSizes.spaceBetweenSections),
 
-              //Form
+              // Formularz rejestracyjny
               SignupForm(
                 passwordTextController: passwordController,
               ),
 
               const SizedBox(height: ZenSizes.spaceBetweenSections),
 
-              //Divider
+              // Dzielnik formularza
               ZenFormDivider(dividerText: ZenTexts.orSignUpWith.capitalize!),
 
               const SizedBox(height: ZenSizes.spaceBetweenSections),
 
-              //Social buttons
+              // Przyciski do rejestracji przez social media
               const ZenSocialButtons(),
 
               const SizedBox(height: ZenSizes.spaceBetweenSections),

@@ -9,8 +9,11 @@ import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
+/// Klasa reprezentująca stronę centrum pomocy
+/// zawierającą różne numery telefonów wsparcia.
 class HelpPage extends StatelessWidget {
   const HelpPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,14 +24,17 @@ class HelpPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              // Obrazek animowany centrum pomocy
               Image.asset(
                 height: 150,
                 ZenImages.helpCenterAnimation,
                 fit: BoxFit.cover,
               ),
+              // Odstęp między sekcjami
               const SizedBox(
                 height: ZenSizes.spaceBetweenSections,
               ),
+              // Przycisk prowadzący do Dziecięcego Telefonu Zaufania
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -41,9 +47,11 @@ class HelpPage extends StatelessWidget {
                   child: const Text(ZenTexts.firstCallName),
                 ),
               ),
+              // Odstęp między elementami
               const SizedBox(
                 height: ZenSizes.spaceBetweenItems,
               ),
+              // Przycisk prowadzący do Telefonu Dzieci i Młodzieży
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -57,9 +65,11 @@ class HelpPage extends StatelessWidget {
                   child: const Text(ZenTexts.secondCallName),
                 ),
               ),
+              // Odstęp między elementami
               const SizedBox(
                 height: ZenSizes.spaceBetweenItems,
               ),
+              // Przycisk prowadzący do Telefonu i Czatu Zaufania dla Dzieci i Młodzieży
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -73,9 +83,11 @@ class HelpPage extends StatelessWidget {
                   child: const Text(ZenTexts.thirdCallName),
                 ),
               ),
+              // Odstęp między elementami
               const SizedBox(
                 height: ZenSizes.spaceBetweenItems,
               ),
+              // Przycisk prowadzący do Kryzysowego Telefonu Zaufania
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -89,9 +101,11 @@ class HelpPage extends StatelessWidget {
                   child: const Text(ZenTexts.fourthCallName),
                 ),
               ),
+              // Odstęp między elementami
               const SizedBox(
                 height: ZenSizes.spaceBetweenItems,
               ),
+              // Przycisk prowadzący do Niebieskiej Linii
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(

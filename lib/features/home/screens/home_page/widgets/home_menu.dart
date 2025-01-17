@@ -5,8 +5,11 @@ import 'package:projekt_zespolowy_pcz/utils/helpers/helper_functions.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../models/meditation.dart';
 
+/// Klasa reprezentująca menu główne z opcjami medytacji.
 class HomeMenu extends StatefulWidget {
+  // Zapytanie wyszukiwania
   final String searchQuery;
+  // Wybrany typ medytacji
   final MeditationType? selectedType;
 
   const HomeMenu({
@@ -20,6 +23,7 @@ class HomeMenu extends StatefulWidget {
 }
 
 class _HomeMenuState extends State<HomeMenu> {
+  /// Filtrowana lista medytacji na podstawie zapytania wyszukiwania i wybranego typu medytacji.
   List<Meditation> get filteredMeditations {
     return meditations.where((meditation) {
       final matchesQuery = widget.searchQuery.isEmpty ||

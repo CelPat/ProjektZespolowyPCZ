@@ -9,12 +9,16 @@ import '../../../../utils/constants/text_strings.dart';
 import 'widgets/login_form.dart';
 import 'widgets/login_header.dart';
 
+/// Klasa reprezentująca stronę logowania w aplikacji.
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
+  // Kontroler tekstowy dla pola użytkownika
   final TextEditingController usernameController = TextEditingController();
+  // Kontroler tekstowy dla pola hasła
   final TextEditingController passwordController = TextEditingController();
 
+  // Funkcja obsługująca logowanie użytkownika
   void signUserIn() {}
 
   @override
@@ -25,21 +29,21 @@ class LoginPage extends StatelessWidget {
           padding: ZenSpacingStyle.paddingWithAppBarHeight,
           child: Column(
             children: [
-              // Logo
+              // Nagłówek z logo
               const ZenLoginHeader(),
 
-              // Login Form
+              // Formularz logowania
               ZenLoginForm(
                 passwordTextController: passwordController,
               ),
 
-              // Divider
+              // Dzielnik formularza
               ZenFormDivider(
                 dividerText: ZenTexts.orSignInWith.capitalize!,
               ),
               const SizedBox(height: ZenSizes.spaceBetweenSections),
 
-              // Footer
+              // Przyciski do logowania przez social media
               const ZenSocialButtons()
             ],
           ),

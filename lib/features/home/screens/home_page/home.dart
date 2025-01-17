@@ -8,6 +8,7 @@ import '../../../../common/styles/spacing_styles.dart';
 import '../../models/meditation_types.dart';
 import 'widgets/meditation_search_bar.dart';
 
+/// Klasa reprezentująca główną stronę aplikacji z menu opcji medytacji.
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -16,8 +17,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // Kontroler tekstowy do zarządzania tekstem wyszukiwania
   TextEditingController searchController = TextEditingController();
+  // Przechowywanie zapytania wyszukiwania
   String searchQuery = '';
+  // Wybrany typ medytacji
   MeditationType? selectedType;
 
   @override
@@ -45,6 +49,7 @@ class _HomePageState extends State<HomePage> {
           padding: ZenSpacingStyle.paddingWithAppBarHeight,
           child: Column(
             children: [
+              // Pasek wyszukiwania medytacji
               MeditationSearchBar(
                 searchController: searchController,
                 onTextChanged: (text) {
@@ -60,6 +65,7 @@ class _HomePageState extends State<HomePage> {
                 onFilterPressed: () => showFilterDialog(context),
               ),
               const SizedBox(height: ZenSizes.spaceBetweenSections),
+              // Lista medytacji filtrowana na podstawie zapytania wyszukiwania i typu medytacji
               Expanded(
                 child: HomeMenu(
                   searchQuery: searchQuery,
@@ -73,6 +79,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  /// Funkcja pokazująca okno dialogowe do filtrowania typu medytacji.
   void showFilterDialog(BuildContext context) {
     showDialog(
       context: context,

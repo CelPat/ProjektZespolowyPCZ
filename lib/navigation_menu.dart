@@ -7,6 +7,7 @@ import 'package:projekt_zespolowy_pcz/features/home/screens/home_page/home.dart'
 import 'package:projekt_zespolowy_pcz/utils/constants/colors.dart';
 import 'package:projekt_zespolowy_pcz/utils/helpers/helper_functions.dart';
 
+/// Klasa reprezentująca nawigacyjne menu w aplikacji.
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({
     super.key,
@@ -14,7 +15,9 @@ class NavigationMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Inicjalizacja kontrolera nawigacji
     final controller = Get.put(NavigationController());
+    // Sprawdzenie, czy tryb ciemny jest włączony
     final darkMode = ZenHelperFunctions.isDarkMode(context);
     return Scaffold(
       bottomNavigationBar: Obx(
@@ -43,9 +46,12 @@ class NavigationMenu extends StatelessWidget {
   }
 }
 
+/// Kontroler zarządzający nawigacją w aplikacji.
 class NavigationController extends GetxController {
+  // Przechowuje indeks aktualnie wybranej strony
   final Rx<int> selectedIndex = 0.obs;
 
+  // Lista ekranów, między którymi można nawigować
   final screens = [
     const HomePage(),
     // Container(

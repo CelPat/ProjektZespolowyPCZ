@@ -8,28 +8,32 @@ import '../../../../../utils/constants/text_strings.dart';
 import '../../../controllers/password_controller.dart';
 import '../../signup/signup.dart';
 
+/// Klasa reprezentująca formularz logowania w aplikacji.
 class ZenLoginForm extends StatelessWidget {
+  // Kontroler tekstowy dla pola hasła
   final TextEditingController passwordTextController;
   const ZenLoginForm({super.key, required this.passwordTextController});
 
   @override
   Widget build(BuildContext context) {
+    // Kontroler do zarządzania widocznością hasła
     final PasswordVisibilityController passwordVisibilityController =
         Get.put(PasswordVisibilityController());
+    
     return Form(
       child: Padding(
         padding:
             const EdgeInsets.symmetric(vertical: ZenSizes.spaceBetweenSections),
         child: Column(
           children: [
-            // Email
+            // Pole tekstowe dla e-maila
             TextFormField(
               decoration: const InputDecoration(labelText: ZenTexts.email),
             ),
 
             const SizedBox(height: ZenSizes.spaceBetweenInputFields),
 
-            // Password
+            // Pole tekstowe dla hasła
             PasswordField(
                 passwordVisibilityController: passwordVisibilityController,
                 passwordController: passwordTextController),
@@ -39,11 +43,11 @@ class ZenLoginForm extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // Remember Me
+                // Checkbox "Zapamiętaj mnie"
                 Checkbox(value: true, onChanged: (value) {}),
                 const Text(ZenTexts.rememberMe),
 
-                // Forgot Password
+                // Przycisk "Zapomniałeś hasła?"
                 TextButton(
                     onPressed: () => Get.to(() => ForgotPassword()),
                     child: const Text(ZenTexts.forgotPassword)),
@@ -51,7 +55,7 @@ class ZenLoginForm extends StatelessWidget {
             ),
             const SizedBox(height: ZenSizes.spaceBetweenSections),
 
-            // Sign In Button
+            // Przycisk "Zaloguj się"
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
@@ -61,7 +65,7 @@ class ZenLoginForm extends StatelessWidget {
             ),
             const SizedBox(height: ZenSizes.spaceBetweenItems),
 
-            // Create account Button
+            // Przycisk "Utwórz konto"
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(

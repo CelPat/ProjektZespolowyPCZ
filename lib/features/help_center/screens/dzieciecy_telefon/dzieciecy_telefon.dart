@@ -4,8 +4,11 @@ import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 import 'package:url_launcher/link.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
+/// Klasa reprezentująca stronę aplikacji
+/// z numerem Dziecięcego Telefonu Zaufania.
 class DzieciecyTelefon extends StatelessWidget {
   const DzieciecyTelefon({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,9 +27,11 @@ class DzieciecyTelefon extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                // Odstęp między elementami
                 const SizedBox(
                   height: ZenSizes.spaceBetweenItems,
                 ),
+                // Przycisk do wykonywania połączeń telefonicznych
                 SizedBox(
                     child: ElevatedButton.icon(
                   onPressed: () {
@@ -39,23 +44,22 @@ class DzieciecyTelefon extends StatelessWidget {
                     color: Colors.white,
                   ),
                   label: const Text('800 12 12 12'),
-                )
-
-                    // ElevatedButton(
-                    //     onPressed: () {}, child: const Text('800 12 12 12')),
-                    ),
+                )),
+                // Większy odstęp między elementami
                 const SizedBox(
                   height: ZenSizes.spaceBetweenItems * 2,
                 ),
+                // Opis dostępnej pomocy pod numerem telefonu
                 const SizedBox(
                     child: Text(
                         'Pod tym numerem dzieci, rodzice i opiekunowie mogą uzyskać wsparcie psychologiczne i prawne. Dorośli mogą zgłaszać problemy dzieci lub zaniedbania. Najczęściej poruszane są sprawy przemocy, problemów emocjonalnych, relacji rówieśniczych, szkolnych i rodzinnych. Dostępny jest także całodobowy chat.',
                         textAlign: TextAlign.center)),
+                // Odstęp między elementami
                 const SizedBox(
                   height: ZenSizes.spaceBetweenItems,
                 ),
+                // Link do strony internetowej z dodatkowymi informacjami
                 SizedBox(
-                    //Text('800121212.pl')
                     width: 150,
                     child: Link(
                         uri: Uri.parse('https://800121212.pl/'),

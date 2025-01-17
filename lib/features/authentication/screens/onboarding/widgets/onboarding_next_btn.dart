@@ -6,6 +6,7 @@ import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/device/device_utility.dart';
 
+/// Klasa reprezentująca przycisk "Dalej" na ekranie wprowadzającym.
 class OnBoardingNextBtn extends StatelessWidget {
   const OnBoardingNextBtn({
     super.key,
@@ -13,12 +14,14 @@ class OnBoardingNextBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Sprawdzenie, czy tryb ciemny jest włączony
     final dark = ZenHelperFunctions.isDarkMode(context);
 
     return Positioned(
       bottom: ZenDeviceUtils.getBottomNavigationBarHeight(),
       right: ZenSizes.defaultSpace,
       child: ElevatedButton(
+        // Akcja po kliknięciu przycisku "Dalej"
         onPressed: () => OnboardingController.instance.nextPage(),
         style: ElevatedButton.styleFrom(
             shape: const CircleBorder(),

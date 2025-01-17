@@ -7,6 +7,8 @@ import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/device/device_utility.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
+/// Klasa reprezentująca nawigację kropek
+/// na ekranie wprowadzającym.
 class OnBoardingDotNavigation extends StatelessWidget {
   const OnBoardingDotNavigation({
     super.key,
@@ -14,7 +16,9 @@ class OnBoardingDotNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Sprawdzenie, czy tryb ciemny jest włączony
     final dark = ZenHelperFunctions.isDarkMode(context);
+    // Inicjalizacja kontrolera onboardingowego
     final controller = OnboardingController.instance;
 
     return Positioned(

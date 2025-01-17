@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:projekt_zespolowy_pcz/features/home/models/meditation.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 
+/// Strona wyświetlająca szczegóły wybranej medytacji.
 class MeditationPage extends StatefulWidget {
+  // Identyfikator medytacji
   final int meditationId;
   const MeditationPage({super.key, required this.meditationId});
 
@@ -16,7 +18,7 @@ class _MeditationPageState extends State<MeditationPage> {
   @override
   void initState() {
     super.initState();
-    // Find the meditation by its id
+    // Znalezienie medytacji po jej identyfikatorze
     meditation = meditations
         .firstWhere((meditation) => meditation.id == widget.meditationId);
   }
@@ -29,14 +31,17 @@ class _MeditationPageState extends State<MeditationPage> {
       ),
       body: Column(
         children: [
-          Image.asset(meditation.labelImage), // Display the labelImage
+          // Wyświetlenie obrazka medytacji
+          Image.asset(meditation.labelImage),
           const SizedBox(
             height: ZenSizes.spaceBetweenSections,
           ),
-          Text(meditation.shortDescription), // Display shortDescription
+          // Wyświetlenie krótkiego opisu medytacji
+          Text(meditation.shortDescription),
+          // Wyświetlenie pełnego opisu medytacji
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Text(meditation.description), // Display the full description
+            child: Text(meditation.description),
           ),
         ],
       ),

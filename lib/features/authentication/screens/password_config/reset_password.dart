@@ -8,6 +8,7 @@ import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
 import '../../../../utils/helpers/helper_functions.dart';
 
+/// Klasa reprezentująca ekran resetowania hasła w aplikacji.
 class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key});
 
@@ -17,6 +18,7 @@ class ResetPassword extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
+          // Przycisk powrotu
           IconButton(
               onPressed: () => Get.back(),
               icon: const Icon(CupertinoIcons.clear))
@@ -27,7 +29,7 @@ class ResetPassword extends StatelessWidget {
           padding: const EdgeInsets.all(ZenSizes.defaultSpace),
           child: Column(
             children: [
-// Image
+              // Obrazek informujący o wysłaniu wiadomości e-mail
               Image(
                 image: const AssetImage(ZenImages.newEmailMessage),
                 width: ZenHelperFunctions.screenWidth() * 0.6,
@@ -36,7 +38,7 @@ class ResetPassword extends StatelessWidget {
                 height: ZenSizes.spaceBetweenSections,
               ),
 
-              // Title & Subtitle
+              // Tytuł i podtytuł ekranu
               Text(
                 ZenTexts.changeYourPasswordTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
@@ -54,7 +56,7 @@ class ResetPassword extends StatelessWidget {
                 height: ZenSizes.spaceBetweenSections,
               ),
 
-              // Buttons
+              // Przycisk "Gotowe"
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -66,6 +68,7 @@ class ResetPassword extends StatelessWidget {
                 height: ZenSizes.spaceBetweenItems,
               ),
 
+              // Przycisk ponownego wysłania wiadomości e-mail
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
