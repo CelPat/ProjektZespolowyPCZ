@@ -29,7 +29,7 @@ Przed rozpoczęciem pracy upewnij się, że Twój sprzęt spełnia następujące
      ```
    - Przejdź do pobranego folderu:
      ```bash
-     cd nazwa-repozytorium
+     cd ProjektZespolowyPCZ
      ```
 
 2. **Instalacja zależności projektu:**
@@ -70,12 +70,8 @@ Przed rozpoczęciem pracy upewnij się, że Twój sprzęt spełnia następujące
    - Wypchnij zmiany na zdalne repozytorium:
      ```bash
      git push origin nazwa-funkcji
-     ```
 
-4. **Recenzja kodu:**
-   - Stwórz Pull Request w serwisie GitHub, opisując dokładnie zmiany.
-   - Oczekuj na recenzję i uwzględnij ewentualne uwagi.
-
+     
 ---
 
 #### **4. Struktura projektu**
