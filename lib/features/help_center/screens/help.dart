@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:projekt_zespolowy_pcz/common/styles/spacing_styles.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/niebieska_linia/niebieska_linia.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/dzieciecy_telefon/dzieciecy_telefon.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/kryzysowy_telefon_zaufania/kryzysowy_telefon_zaufania.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/telefon_dzieci_i_mlodziezy/telefon_dzieci_i_mlodziezy.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/telefon_chat_dzieci_mlodziez/telefon_chat_dzieci_mlodziez.dart';
+import 'package:projekt_zespolowy_pcz/features/help_center/screens/niebieska_linia/niebieska_linia.dart';
+import 'package:projekt_zespolowy_pcz/features/help_center/screens/dzieciecy_telefon/dzieciecy_telefon.dart';
+import 'package:projekt_zespolowy_pcz/features/help_center/screens/kryzysowy_telefon_zaufania/kryzysowy_telefon_zaufania.dart';
+import 'package:projekt_zespolowy_pcz/features/help_center/screens/telefon_dzieci_i_mlodziezy/telefon_dzieci_i_mlodziezy.dart';
+import 'package:projekt_zespolowy_pcz/features/help_center/screens/telefon_chat_dzieci_mlodziez/telefon_chat_dzieci_mlodziez.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';

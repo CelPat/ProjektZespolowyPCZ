@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:projekt_zespolowy_pcz/common/styles/spacing_styles.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/knowledge/choroby/adhd/adhd.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/knowledge/choroby/anxiety/anxiety.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/knowledge/choroby/depresja/depression.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/knowledge/choroby/ocd/ocd.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/knowledge/choroby/ptsd/ptsd.dart';
+import 'package:projekt_zespolowy_pcz/features/knowledge_center/screens/choroby/adhd/adhd.dart';
+import 'package:projekt_zespolowy_pcz/features/knowledge_center/screens/choroby/anxiety/anxiety.dart';
+import 'package:projekt_zespolowy_pcz/features/knowledge_center/screens/choroby/depresja/depression.dart';
+import 'package:projekt_zespolowy_pcz/features/knowledge_center/screens/choroby/ocd/ocd.dart';
+import 'package:projekt_zespolowy_pcz/features/knowledge_center/screens/choroby/ptsd/ptsd.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
-class KnowledgePage extends StatelessWidget{
-  const KnowledgePage ({super.key});
+class KnowledgePage extends StatelessWidget {
+  const KnowledgePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class KnowledgePage extends StatelessWidget{
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(const DepressionPage());
+                    Get.to(() => const DepressionPage());
                   },
                   child: const Text(ZenTexts.depresionButtonName),
                 ),
@@ -47,7 +47,7 @@ class KnowledgePage extends StatelessWidget{
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(const AnxietyPage());
+                    Get.to(() => const AnxietyPage());
                   },
                   child: const Text(ZenTexts.anxietyButtonName),
                 ),
@@ -59,7 +59,7 @@ class KnowledgePage extends StatelessWidget{
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(const PtsdPage());
+                    Get.to(() => const PtsdPage());
                   },
                   child: const Text(ZenTexts.ptsdButtonName),
                 ),
@@ -71,7 +71,7 @@ class KnowledgePage extends StatelessWidget{
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(const AdhdPage());
+                    Get.to(() => const AdhdPage());
                   },
                   child: const Text(ZenTexts.adhdButtonName),
                 ),
@@ -83,7 +83,7 @@ class KnowledgePage extends StatelessWidget{
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(const OcdPage());
+                    Get.to(() => const OcdPage());
                   },
                   child: const Text(ZenTexts.ocdButtonName),
                 ),
