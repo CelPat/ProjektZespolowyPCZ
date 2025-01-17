@@ -67,6 +67,7 @@ class ZenTexts {
   static const String meditations = "Meditations";
   static const String helpCenter = "Help center";
   static const String knowledgeCenter = "Knowledge center";
+  static const String tryIt = "Try it";
 
   // -- Home Page Text
 
@@ -96,15 +97,10 @@ class ZenTexts {
   static const String niebieskaLiniaTitle = "Niebieska Linia";
 
   // Knowledge Center Page Buttons Texts
-  
 
-  static const String depresionButtonName =
-      "Depresja";
-  static const String anxietyButtonName =
-      "Zaburzenia lękowe";
-  static const String ptsdButtonName =
-      "Zespół stresu pourazowego (PTSD)";
-  static const String adhdButtonName =
-      "ADHD";
+  static const String depresionButtonName = "Depresja";
+  static const String anxietyButtonName = "Zaburzenia lękowe";
+  static const String ptsdButtonName = "Zespół stresu pourazowego (PTSD)";
+  static const String adhdButtonName = "ADHD";
   static const String ocdButtonName = "Zaburzenia obsesyjno-kompulsyjne (OCD)";
 }

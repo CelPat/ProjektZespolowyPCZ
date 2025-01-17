@@ -13,7 +13,7 @@ class ZenTextFormFieldTheme {
     labelStyle: const TextStyle()
         .copyWith(fontSize: ZenSizes.fontSizeMd, color: ZenColors.black),
     hintStyle: const TextStyle()
-        .copyWith(fontSize: ZenSizes.fonZenSizesm, color: ZenColors.black),
+        .copyWith(fontSize: ZenSizes.fontSizeSm, color: ZenColors.black),
     errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
     floatingLabelStyle:
         const TextStyle().copyWith(color: ZenColors.black.withOpacity(0.8)),
@@ -47,7 +47,7 @@ class ZenTextFormFieldTheme {
     labelStyle: const TextStyle()
         .copyWith(fontSize: ZenSizes.fontSizeMd, color: ZenColors.white),
     hintStyle: const TextStyle()
-        .copyWith(fontSize: ZenSizes.fonZenSizesm, color: ZenColors.white),
+        .copyWith(fontSize: ZenSizes.fontSizeSm, color: ZenColors.white),
     floatingLabelStyle:
         const TextStyle().copyWith(color: ZenColors.white.withOpacity(0.8)),
     border: const OutlineInputBorder().copyWith(

@@ -11,11 +11,13 @@ class ZenSizes {
   static const double iconSm = 16.0;
   static const double iconMd = 24.0;
   static const double iconLg = 32.0;
+  static const double iconXlg = 40.0;
 
   // Font sizes
-  static const double fonZenSizesm = 14.0;
-  static const double fontSizeMd = 16.0;
-  static const double fontSizeLg = 18.0;
+  static const double fontSizeSm = 12.0;
+  static const double fontSizeMd = 14.0;
+  static const double fontSizeLg = 16.0;
+  static const double fontSizeXl = 18.0;
 
   // Button sizes
   static const double buttonHeight = 18.0;
@@ -38,6 +40,7 @@ class ZenSizes {
   static const double borderRadiusSm = 4.0;
   static const double borderRadiusMd = 8.0;
   static const double borderRadiusLg = 12.0;
+  static const double borderRadiusXl = 18.0;
 
   // Divider height
   static const double dividerHeight = 1.0;
