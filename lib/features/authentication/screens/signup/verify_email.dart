@@ -14,10 +14,12 @@ class VerifyEmailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: Theme.of(context).iconTheme,
         actions: [
           IconButton(
-              onPressed: () => Get.offAll(() => LoginPage()),
-              icon: const Icon(CupertinoIcons.clear))
+            onPressed: () => Get.offAll(() => LoginPage()),
+            icon: const Icon(CupertinoIcons.clear),
+          ),
         ],
       ),
       body: SingleChildScrollView(
