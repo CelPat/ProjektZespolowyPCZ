@@ -1,47 +1,106 @@
 # ProjektZespolowyPCZ
 Projekt Zespołowy PAI 
 
-### Instrukcja obsługi aplikacji mindfulness
+### Dokumentacja techniczna: Instrukcja pracy z projektem
 
-Poniżej znajdziesz prostą instrukcję obsługi aplikacji mindfulness.
+#### **1. Wymagania sprzętowe**
+Przed rozpoczęciem pracy upewnij się, że Twój sprzęt spełnia następujące wymagania:
+
+- **Procesor:** Min. dwurdzeniowy, 2.0 GHz lub wyższy.
+- **Pamięć RAM:** Min. 8 GB (zalecane 16 GB dla płynnej pracy z emulatorami).
+- **Przestrzeń dyskowa:** Min. 10 GB wolnego miejsca na dysku SSD.
+- **System operacyjny:**
+  - Windows 10/11 (64-bit).
+  - macOS Catalina lub nowszy.
+  - Dystrybucja Linux z wsparciem dla Git i narzędzi programistycznych.
+- **Dodatkowe oprogramowanie:**
+  - Visual Studio Code / IntelliJ IDEA / Android Studio (lub inne preferowane IDE).
+  - Zainstalowane środowisko **Flutter** (wersja kompatybilna z projektem).
+  - Zainstalowany Git (wersja 2.30 lub nowsza).
 
 ---
 
-#### **1. Rejestracja i logowanie**
-1. **Uruchom aplikację.**
-2. **Załóż konto:**
-   - Kliknij przycisk **"Sign Up"**.
-   - Wypełnij wymagane pola (np. imię, adres e-mail, hasło).
-   - Zatwierdź formularz, klikając **"Create Account"**.
-   - Sprawdź swoją skrzynkę e-mail, aby potwierdzić rejestrację.
-3. **Zaloguj się:**
-   - Na ekranie logowania wpisz swój e-mail i hasło.
-   - Kliknij przycisk **"Log In"**.
+#### **2. Instalacja i konfiguracja środowiska**
+1. **Pobranie repozytorium:**
+   - Otwórz terminal lub aplikację Git Bash.
+   - Sklonuj repozytorium za pomocą komendy:
+     ```bash
+     git clone https://github.com/CelPat/ProjektZespolowyPCZ
+     ```
+   - Przejdź do pobranego folderu:
+     ```bash
+     cd ProjektZespolowyPCZ
+     ```
 
-#### **2. Onboarding – poznanie aplikacji**
-1. Po pierwszym logowaniu przejdziesz przez **samouczek** (onboarding).
-2. Zobaczysz krótkie opisy funkcji aplikacji, które pomogą Ci w pełni wykorzystać jej możliwości.
-3. Możesz pominąć onboarding, klikając **"Skip"**, ale zalecamy go przejrzeć.
+2. **Instalacja zależności projektu:**
+   - Upewnij się, że Flutter jest poprawnie zainstalowany i skonfigurowany:
+     ```bash
+     flutter doctor
+     ```
+   - Zainstaluj zależności projektu:
+     ```bash
+     flutter pub get
+     ```
 
-#### **3. Wybór praktyki mindfulness**
-1. Przejdź na ekran główny, gdzie znajdziesz różne kategorie medytacji:
-  - Medytacja prowadzona
-  - Medytacja w ciszy
-  - Pulsujące koło do oddechu
-2. Użyj paska wyszukiwania, aby znaleźć konkretną medytację (np. "Medytacja na sen").
+3. **Uruchomienie projektu:**
+   - Aby uruchomić aplikację na emulatorze lub fizycznym urządzeniu, użyj:
+     ```bash
+     flutter run
+     ```
 
-#### **4. Rozpoczęcie medytacji**
-1. Wybierz interesującą Cię medytację.
-(TO DO)
-2. Kliknij przycisk **"Start"** lub odpowiedni symbol.
-3. Postępuj zgodnie z instrukcjami audio lub wizualnymi.
+#### **3. Zalecenia dla deweloperów**
+1. **Praca na gałęziach:**
+   - Nigdy nie pracuj bezpośrednio na głównej gałęzi (`main` lub `master`).
+   - Stwórz nową gałąź dla swoich zmian:
+     ```bash
+     git checkout -b nazwa-funkcji
+     ```
 
-#### **5. Funkcje pomocnicze**
-- **Centrum pomocy:** W razie kryzysu skorzystaj z funkcji kontaktu z pomocą:
-   - "Kryzysowy telefon zaufania."
-   - "Niebieska linia."
-   - "Telefon dzieci i młodzieży."
+2. **Zalecenia dotyczące commitów:**
+   - Używaj zwięzłych, opisowych wiadomości commitów. Przykład:
+     ```
+     git commit -m "Dodano funkcję logowania użytkowników"
+     ```
 
-#### **6. Rozwiązywanie problemów z logowaniem**
-- Kliknij **"Forgot Password"** na ekranie logowania, jeśli zapomnisz hasła.
-- Postępuj zgodnie z instrukcjami resetowania.
+3. **Przygotowanie kodu do Pull Requesta:**
+   - Sprawdź formatowanie kodu:
+     ```bash
+     flutter format .
+     ```
+   - Wypchnij zmiany na zdalne repozytorium:
+     ```bash
+     git push origin nazwa-funkcji
+
+     
+---
+
+#### **4. Struktura projektu**
+Poniżej przedstawiono kluczowe foldery i ich funkcje:
+- **`lib/`** – Główna logika aplikacji.
+- **`assets/`** – Zasoby aplikacji (grafiki, czcionki itp.).
+- **`pubspec.yaml`** – Plik zarządzający zależnościami projektu.
+
+---
+
+#### **5. Rozwiązywanie problemów**
+- **Problem z zależnościami:**  
+  Jeśli wystąpią błędy podczas instalacji zależności, spróbuj:  
+  ```bash
+  flutter clean
+  flutter pub get
+  ```
+
+- **Niekompatybilna wersja Fluttera:**  
+  Sprawdź wymaganą wersję Fluttera w pliku `pubspec.yaml`. Jeśli potrzebujesz konkretnej wersji:
+  ```bash
+  flutter downgrade wersja
+  ```
+
+- **Brak emulatora:**  
+  Upewnij się, że masz skonfigurowany emulator w Android Studio lub użyj fizycznego urządzenia z włączonym trybem debugowania USB.
+
+---
+
+#### **6. Dodatkowe zasoby**
+- Oficjalna dokumentacja Fluttera: [flutter.dev](https://flutter.dev)
+- Dokumentacja projektu: Sprawdź plik `doc/api/index.html` w repozytorium.
