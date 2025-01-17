@@ -10,6 +10,8 @@ import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
+/// Klasa reprezentująca stronę centrum wiedzy
+/// zawierającą różne informacje o chorobach.
 class KnowledgePage extends StatelessWidget {
   const KnowledgePage({super.key});
 
@@ -23,14 +25,17 @@ class KnowledgePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              // Obrazek animowany centrum wiedzy
               Image.asset(
                 height: 150,
                 ZenImages.knowledgeCenterAnimation,
                 fit: BoxFit.cover,
               ),
+              // Odstęp między sekcjami
               const SizedBox(
                 height: ZenSizes.spaceBetweenSections,
               ),
+              // Przycisk prowadzący do strony o depresji
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -40,9 +45,11 @@ class KnowledgePage extends StatelessWidget {
                   child: const Text(ZenTexts.depresionButtonName),
                 ),
               ),
+              // Odstęp między elementami
               const SizedBox(
                 height: ZenSizes.spaceBetweenItems,
               ),
+              // Przycisk prowadzący do strony o zaburzeniach lękowych
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -52,9 +59,11 @@ class KnowledgePage extends StatelessWidget {
                   child: const Text(ZenTexts.anxietyButtonName),
                 ),
               ),
+              // Odstęp między elementami
               const SizedBox(
                 height: ZenSizes.spaceBetweenItems,
               ),
+              // Przycisk prowadzący do strony o PTSD
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -64,9 +73,11 @@ class KnowledgePage extends StatelessWidget {
                   child: const Text(ZenTexts.ptsdButtonName),
                 ),
               ),
+              // Odstęp między elementami
               const SizedBox(
                 height: ZenSizes.spaceBetweenItems,
               ),
+              // Przycisk prowadzący do strony o ADHD
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -76,9 +87,11 @@ class KnowledgePage extends StatelessWidget {
                   child: const Text(ZenTexts.adhdButtonName),
                 ),
               ),
+              // Odstęp między elementami
               const SizedBox(
                 height: ZenSizes.spaceBetweenItems,
               ),
+              // Przycisk prowadzący do strony o OCD
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(

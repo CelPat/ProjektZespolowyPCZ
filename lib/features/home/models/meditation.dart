@@ -5,13 +5,14 @@ import 'package:projekt_zespolowy_pcz/features/home/screens/meditation/meditatio
 
 import '../../../utils/constants/image_strings.dart';
 
+/// Klasa reprezentująca medytację z jej właściwościami.
 class Meditation {
-  final int id;
-  final String labelImage;
-  final String shortDescription;
-  final String description;
-  final VoidCallback onTap;
-  final MeditationType meditationType;
+  final int id; // Unikalne ID medytacji
+  final String labelImage; // Ścieżka do obrazka reprezentującego medytację
+  final String shortDescription; // Krótki opis medytacji
+  final String description; // Pełny opis medytacji
+  final VoidCallback onTap; // Funkcja wywoływana po kliknięciu na medytację
+  final MeditationType meditationType; // Typ medytacji
 
   Meditation(
       {required this.id,
@@ -22,6 +23,7 @@ class Meditation {
       required this.meditationType});
 }
 
+/// Lista dostępnych medytacji.
 List<Meditation> meditations = [
   Meditation(
     id: 1,

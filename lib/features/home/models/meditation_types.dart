@@ -1,3 +1,4 @@
+// Enum reprezentujący różne typy medytacji.
 enum MeditationType {
   guidedMeditation, // Medytacja prowadzona
   silentMeditation, // Medytacja w ciszy
@@ -12,6 +13,7 @@ enum MeditationType {
   soundHealing, // Medytacja dźwiękowa
 }
 
+// Rozszerzenie dodające opis do każdego typu medytacji.
 extension MeditationTypeExtension on MeditationType {
   String get description {
     switch (this) {

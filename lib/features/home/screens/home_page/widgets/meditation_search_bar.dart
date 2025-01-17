@@ -4,10 +4,15 @@ import 'package:projekt_zespolowy_pcz/utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
+/// Klasa reprezentująca pasek wyszukiwania medytacji w aplikacji.
 class MeditationSearchBar extends StatelessWidget {
+  // Kontroler tekstowy do zarządzania wprowadzanym tekstem wyszukiwania
   final TextEditingController searchController;
+  // Funkcja wywoływana przy zmianie tekstu w polu wyszukiwania
   final Function(String) onTextChanged;
+  // Funkcja wywoływana przy zatwierdzeniu wyszukiwania
   final Function(String) onSearchSubmitted;
+  // Funkcja wywoływana przy kliknięciu przycisku filtrowania
   final VoidCallback onFilterPressed;
 
   const MeditationSearchBar({
@@ -20,6 +25,7 @@ class MeditationSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Sprawdzenie, czy tryb ciemny jest włączony
     final darkMode = ZenHelperFunctions.isDarkMode(context);
     return TextField(
       controller: searchController,
@@ -36,7 +42,9 @@ class MeditationSearchBar extends StatelessWidget {
         filled: true,
         fillColor: darkMode ? ZenColors.dark : Colors.white,
       ),
+      // Wywołanie funkcji przy zmianie tekstu w polu wyszukiwania
       onChanged: onTextChanged,
+      // Wywołanie funkcji przy zatwierdzeniu wyszukiwania
       onSubmitted: onSearchSubmitted,
       style: Theme.of(context).textTheme.bodySmall,
     );

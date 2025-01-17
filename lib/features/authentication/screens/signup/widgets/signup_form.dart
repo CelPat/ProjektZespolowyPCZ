@@ -8,19 +8,24 @@ import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
 import '../../../controllers/password_controller.dart';
 
+/// Klasa reprezentująca formularz rejestracji w aplikacji.
 class SignupForm extends StatelessWidget {
+  // Kontroler zarządzający procesem rejestracji użytkownika
   final SignupController signUpController = Get.put(SignupController());
+  // Kontroler tekstowy dla pola hasła
   final TextEditingController passwordTextController;
   SignupForm({super.key, required this.passwordTextController});
 
   @override
   Widget build(BuildContext context) {
+    // Kontroler do zarządzania widocznością hasła
     final PasswordVisibilityController passwordVisibilityController =
         Get.put(PasswordVisibilityController());
 
     return Form(
       child: Column(
         children: [
+          // Pola tekstowe dla imienia i nazwiska
           Row(
             children: [
               Expanded(
@@ -52,7 +57,7 @@ class SignupForm extends StatelessWidget {
             height: ZenSizes.spaceBetweenInputFields,
           ),
 
-          //Email
+          // Pole tekstowe dla e-maila
           TextFormField(
             controller: signUpController.emailController,
             expands: false,
@@ -64,6 +69,7 @@ class SignupForm extends StatelessWidget {
             height: ZenSizes.spaceBetweenInputFields,
           ),
 
+          // Pole tekstowe dla hasła
           PasswordField(
               passwordVisibilityController: passwordVisibilityController,
               passwordController: passwordTextController),
@@ -72,14 +78,14 @@ class SignupForm extends StatelessWidget {
             height: ZenSizes.spaceBetweenInputFields,
           ),
 
-          //Sign up Button
-
+          // Przycisk "Zarejestruj się"
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
                 onPressed: () {
                   if (signUpController.validateFields(
                       passwordTextController: passwordTextController)) {
+                    // Przejście do ekranu weryfikacji e-maila
                     Get.to(() => const VerifyEmailScreen());
                   }
                 },

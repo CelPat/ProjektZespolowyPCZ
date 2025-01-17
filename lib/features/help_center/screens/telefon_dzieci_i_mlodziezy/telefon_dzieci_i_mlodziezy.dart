@@ -6,9 +6,12 @@ import 'package:url_launcher/link.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 //import 'package:url_launcher/url_launcher.dart';
 
+/// Klasa reprezentująca stronę aplikacji
+/// z numerem Telefonu Dzieci i Młodzieży.
 class TelefonDzieciIMlodziezy extends StatelessWidget {
   const TelefonDzieciIMlodziezy({super.key});
 
+// Funkcja do wykonywania połączeń telefonicznych
 //   makingPhoneCall() async {
 //   var url = Uri.parse("tel:116111");
 //   if (await canLaunchUrl(url)) {
@@ -36,19 +39,13 @@ class TelefonDzieciIMlodziezy extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                // Odstęp między elementami
                 const SizedBox(
                   height: ZenSizes.spaceBetweenItems,
                 ),
+                // Przycisk do wykonywania połączeń telefonicznych
                 SizedBox(
-                    child:
-                        // ElevatedButton(
-                        //     onPressed: () {},
-                        //     style: ElevatedButton.styleFrom(
-                        //       minimumSize: const Size(200, 40),
-                        //     ),
-                        //     child: const Text('116 111')
-                        //     ),
-                        ElevatedButton.icon(
+                    child: ElevatedButton.icon(
                   onPressed: () {
                     launchUrlString('tel:+48 116 111');
                   },
@@ -60,16 +57,20 @@ class TelefonDzieciIMlodziezy extends StatelessWidget {
                   ),
                   label: const Text('116 111'),
                 )),
+                // Większy odstęp między elementami
                 const SizedBox(
                   height: ZenSizes.spaceBetweenItems * 2,
                 ),
+                // Opis dostępnej pomocy pod numerem telefonu
                 const SizedBox(
                     child: Text(
                         'Telefon ten wspiera dzieci i młodzież w trudnych sytuacjach, umożliwiając rozmowę o ważnych sprawach, problemach, emocjach i doświadczeniach. Można dzwonić w przypadku przemocy, dyskryminacji, problemów rodzinnych, szkolnych, rówieśniczych lub osobistych, a także w chwilach niepokoju czy potrzeby wsparcia.',
                         textAlign: TextAlign.center)),
+                // Większy odstęp między elementami
                 const SizedBox(
                   height: ZenSizes.spaceBetweenItems * 2,
                 ),
+                // Link do strony internetowej z dodatkowymi informacjami
                 SizedBox(
                     width: 150,
                     child: Link(

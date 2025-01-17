@@ -9,15 +9,18 @@ import 'widgets/onboarding_dot_navigation.dart';
 import 'widgets/onboarding_page.dart';
 import 'widgets/onboarding_skip.dart';
 
+/// Klasa reprezentująca ekran wprowadzający w aplikacji.
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Inicjalizacja kontrolera onboardingowego
     final controller = Get.put(OnboardingController());
     return Scaffold(
       body: Stack(
         children: [
+          // Strony PageView z obrazkami, tytułami i podtytułami
           PageView(
             controller: controller.pageController,
             onPageChanged: controller.updatePageIndicator,
@@ -39,8 +42,11 @@ class OnboardingScreen extends StatelessWidget {
               ),
             ],
           ),
+          // Przycisk "Pomiń"
           const OnBoardingSkip(),
+          // Nawigacja kropek
           const OnBoardingDotNavigation(),
+          // Przycisk "Dalej"
           const OnBoardingNextBtn(),
         ],
       ),
