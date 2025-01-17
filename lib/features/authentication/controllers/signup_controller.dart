@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:projekt_zespolowy_pcz/utils/popups/loaders.dart';
 import 'package:projekt_zespolowy_pcz/utils/validators/validation.dart';
 
 class SignupController extends GetxController {
@@ -12,26 +13,23 @@ class SignupController extends GetxController {
     String? emailError =
         ZenValidator.validateEmail(emailController.text.trim());
     if (emailError != null) {
-      Get.snackbar('Validation Error', emailError,
-          snackPosition: SnackPosition.TOP);
+      ZenLoaders.warningSnackBar(
+          title: "Validation Error", message: emailError);
       return false;
     }
 
     String? passwordError =
         ZenValidator.validatePassword(passwordTextController.text.trim());
     if (passwordError != null) {
-      Get.snackbar('Validation Error', passwordError,
-          snackPosition: SnackPosition.TOP);
+      ZenLoaders.warningSnackBar(
+          title: "Validation Error", message: passwordError);
       return false;
     }
 
     if (firstNameController.text.trim().isEmpty ||
         lastNameController.text.trim().isEmpty) {
-      Get.snackbar(
-        "Error",
-        "You need to enter all the fields.",
-        snackPosition: SnackPosition.TOP,
-      );
+      ZenLoaders.warningSnackBar(
+          title: "Error", message: "You need to enter all the fields.");
       return false;
     }
     return true;

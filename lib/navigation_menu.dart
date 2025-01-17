@@ -30,7 +30,7 @@ class NavigationMenu extends StatelessWidget {
               : Colors.black.withOpacity(0.1),
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
-            NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
+            // NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
             NavigationDestination(
                 icon: Icon(Icons.phone_enabled), label: 'Help center'),
             NavigationDestination(
@@ -48,9 +48,9 @@ class NavigationController extends GetxController {
 
   final screens = [
     const HomePage(),
-    Container(
-      color: Colors.amberAccent,
-    ),
+    // Container(
+    //   color: Colors.amberAccent,
+    // ),
     const HelpPage(),
     const KnowledgePage()
   ];
