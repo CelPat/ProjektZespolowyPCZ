@@ -24,7 +24,9 @@ class _MeditationPageState extends State<MeditationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        iconTheme: Theme.of(context).iconTheme,
+      ),
       body: Column(
         children: [
           Image.asset(meditation.labelImage), // Display the labelImage
