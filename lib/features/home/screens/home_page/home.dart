@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projekt_zespolowy_pcz/features/guided_meditations/screens/home/widgets/home_menu.dart';
+import 'package:projekt_zespolowy_pcz/features/home/screens/home_page/widgets/home_menu.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';

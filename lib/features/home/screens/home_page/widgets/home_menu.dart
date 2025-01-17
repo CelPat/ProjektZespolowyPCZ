@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projekt_zespolowy_pcz/features/guided_meditations/models/meditation_types.dart';
+import 'package:projekt_zespolowy_pcz/features/home/models/meditation_types.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/colors.dart';
 import 'package:projekt_zespolowy_pcz/utils/helpers/helper_functions.dart';
 import '../../../../../utils/constants/sizes.dart';
@@ -59,7 +59,7 @@ class _HomeMenuState extends State<HomeMenu> {
                     Padding(
                       padding: const EdgeInsets.all(ZenSizes.defaultSpace),
                       child: Image.asset(
-                        singleMeditation.image,
+                        singleMeditation.labelImage,
                         width: 70,
                         height: 70,
                       ),

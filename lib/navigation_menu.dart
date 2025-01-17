@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:projekt_zespolowy_pcz/features/help_center/screens/help.dart';
 import 'package:projekt_zespolowy_pcz/features/knowledge_center/screens/knowledge.dart';
-import 'package:projekt_zespolowy_pcz/features/guided_meditations/screens/home/home.dart';
+import 'package:projekt_zespolowy_pcz/features/home/screens/home_page/home.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/colors.dart';
 import 'package:projekt_zespolowy_pcz/utils/helpers/helper_functions.dart';
 
