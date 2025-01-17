@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:projekt_zespolowy_pcz/features/guided_meditations/screens/home/widgets/home_menu.dart';
-import 'package:projekt_zespolowy_pcz/utils/constants/colors.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
@@ -24,7 +23,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ZenColors.light,
       appBar: AppBar(
         title: Text(
           ZenTexts.homeAppbarTitle,

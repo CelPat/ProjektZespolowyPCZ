@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projekt_zespolowy_pcz/features/guided_meditations/models/meditation_types.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/colors.dart';
+import 'package:projekt_zespolowy_pcz/utils/helpers/helper_functions.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../models/meditation.dart';
 
@@ -33,6 +34,7 @@ class _HomeMenuState extends State<HomeMenu> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = ZenHelperFunctions.isDarkMode(context);
     return ListView.builder(
       itemCount: filteredMeditations.length,
       itemBuilder: (context, index) {
@@ -45,8 +47,10 @@ class _HomeMenuState extends State<HomeMenu> {
               horizontal: ZenSizes.defaultSpace,
             ),
             decoration: BoxDecoration(
-              color: ZenColors.menuItemBackground,
-              borderRadius: BorderRadius.circular(ZenSizes.borderRadiusLg),
+              color: isDark
+                  ? ZenColors.menuItemBackgroundDark
+                  : ZenColors.menuItemBackgroundLight,
+              borderRadius: BorderRadius.circular(ZenSizes.borderRadiusXl),
             ),
             child: Column(
               children: [
@@ -63,9 +67,7 @@ class _HomeMenuState extends State<HomeMenu> {
                     Expanded(
                       child: Text(
                         singleMeditation.shortDescription,
-                        style: const TextStyle(
-                          fontSize: ZenSizes.fontSizeMd,
-                        ),
+                        style: Theme.of(context).textTheme.headlineSmall,
                       ),
                     ),
                   ],
@@ -76,7 +78,7 @@ class _HomeMenuState extends State<HomeMenu> {
                     alignment: Alignment.bottomRight,
                     child: Text(
                       singleMeditation.meditationType.description,
-                      style: const TextStyle(fontSize: ZenSizes.fontSizeSm),
+                      style: Theme.of(context).textTheme.labelSmall,
                     ),
                   ),
                 ),

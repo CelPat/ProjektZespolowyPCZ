@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:projekt_zespolowy_pcz/utils/constants/colors.dart';
 
 import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/helpers/helper_functions.dart';
 
 class MeditationSearchBar extends StatelessWidget {
   final TextEditingController searchController;
@@ -18,6 +20,7 @@ class MeditationSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final darkMode = ZenHelperFunctions.isDarkMode(context);
     return TextField(
       controller: searchController,
       decoration: InputDecoration(
@@ -28,13 +31,14 @@ class MeditationSearchBar extends StatelessWidget {
         ),
         hintText: 'Search meditations...',
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(ZenSizes.borderRadiusLg),
+          borderRadius: BorderRadius.circular(ZenSizes.borderRadiusXl),
         ),
         filled: true,
-        fillColor: Colors.white,
+        fillColor: darkMode ? ZenColors.dark : Colors.white,
       ),
       onChanged: onTextChanged,
       onSubmitted: onSearchSubmitted,
+      style: Theme.of(context).textTheme.bodySmall,
     );
   }
 }
