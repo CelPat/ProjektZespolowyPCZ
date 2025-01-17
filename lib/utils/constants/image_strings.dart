@@ -24,7 +24,16 @@ class ZenImages {
   // -- Animations
   static const String helpCenterAnimation =
       "assets/images/animations/doubt.gif";
-
   static const String knowledgeCenterAnimation =
       "assets/images/animations/brain.gif";
+
+  // Meditations
+  static const String meditation1 = "assets/images/meditations/meditation.png";
+  static const String meditation2 =
+      "assets/images/meditations/meditation-2.png";
+  static const String meditation3 =
+      "assets/images/meditations/meditation-3.png";
+  static const String monk = "assets/images/meditations/monk.png";
+  static const String buddha = "assets/images/meditations/buddha.png";
+  static const String yoga = "assets/images/meditations/yoga.png";
 }

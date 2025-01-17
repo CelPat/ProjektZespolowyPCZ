@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:projekt_zespolowy_pcz/features/help_center/screens/help.dart';
+import 'package:projekt_zespolowy_pcz/features/guided_meditations/screens/home/widgets/home_menu.dart';
+import 'package:projekt_zespolowy_pcz/utils/constants/colors.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
+
+import '../../../../common/styles/spacing_styles.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,36 +13,35 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ZenColors.light,
+      appBar: AppBar(
+        title: Text(
+          ZenTexts.homeAppbarTitle,
+          style: Theme.of(context).textTheme.headlineSmall,
+          textAlign: TextAlign.center,
+        ),
+        actions: [
+          Image.asset(
+            ZenImages.appLogo,
+            fit: BoxFit.cover,
+            height: ZenSizes.iconXlg,
+          ),
+        ],
+      ),
       body: Center(
-        child: Column(
+        child: Padding(
+          padding: ZenSpacingStyle.paddingWithAppBarHeight,
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(ZenImages.appLogo, fit: BoxFit.cover),
               const SizedBox(
                 height: ZenSizes.spaceBetweenSections,
               ),
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text(ZenTexts.meditations),
-              ),
-              const SizedBox(
-                height: ZenSizes.spaceBetweenItems,
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Get.to(() => const HelpPage());
-                },
-                child: const Text(ZenTexts.helpCenter),
-              ),
-              const SizedBox(
-                height: ZenSizes.spaceBetweenItems,
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text(ZenTexts.knowledgeCenter),
-              ),
-            ]),
+              Expanded(child: HomeMenu()),
+            ],
+          ),
+        ),
       ),
     );
   }
