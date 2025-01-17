@@ -14,9 +14,10 @@ class ZenSizes {
   static const double iconXlg = 40.0;
 
   // Font sizes
-  static const double fonZenSizesm = 14.0;
-  static const double fontSizeMd = 16.0;
-  static const double fontSizeLg = 18.0;
+  static const double fontSizeSm = 12.0;
+  static const double fontSizeMd = 14.0;
+  static const double fontSizeLg = 16.0;
+  static const double fontSizeXl = 18.0;
 
   // Button sizes
   static const double buttonHeight = 18.0;

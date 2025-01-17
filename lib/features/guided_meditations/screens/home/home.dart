@@ -6,9 +6,20 @@ import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
 import '../../../../common/styles/spacing_styles.dart';
+import '../../models/meditation_types.dart';
+import 'widgets/meditation_search_bar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  TextEditingController searchController = TextEditingController();
+  String searchQuery = '';
+  MeditationType? selectedType;
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +32,13 @@ class HomePage extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         actions: [
-          Image.asset(
-            ZenImages.appLogo,
-            fit: BoxFit.cover,
-            height: ZenSizes.iconXlg,
+          Padding(
+            padding: const EdgeInsets.only(right: ZenSizes.defaultSpace),
+            child: Image.asset(
+              ZenImages.appLogo,
+              fit: BoxFit.cover,
+              height: ZenSizes.iconXlg,
+            ),
           ),
         ],
       ),
@@ -32,17 +46,58 @@ class HomePage extends StatelessWidget {
         child: Padding(
           padding: ZenSpacingStyle.paddingWithAppBarHeight,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: ZenSizes.spaceBetweenSections,
+              MeditationSearchBar(
+                searchController: searchController,
+                onTextChanged: (text) {
+                  setState(() {
+                    searchQuery = text;
+                  });
+                },
+                onSearchSubmitted: (query) {
+                  setState(() {
+                    searchQuery = query;
+                  });
+                },
+                onFilterPressed: () => showFilterDialog(context),
               ),
-              Expanded(child: HomeMenu()),
+              const SizedBox(height: ZenSizes.spaceBetweenSections),
+              Expanded(
+                child: HomeMenu(
+                  searchQuery: searchQuery,
+                  selectedType: selectedType,
+                ),
+              ),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  void showFilterDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Filter by Meditation Type'),
+          content: DropdownButton<MeditationType>(
+            value: selectedType,
+            items: MeditationType.values.map((type) {
+              return DropdownMenuItem<MeditationType>(
+                value: type,
+                child: Text(type.description),
+              );
+            }).toList(),
+            onChanged: (MeditationType? newType) {
+              setState(() {
+                selectedType = newType;
+              });
+              Navigator.of(context).pop();
+            },
+          ),
+        );
+      },
     );
   }
 }
