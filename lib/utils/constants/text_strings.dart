@@ -94,4 +94,17 @@ class ZenTexts {
   static const String kryzysowyTelefonZaufaniaTitle =
       "Kryzysowy telefon zaufania Instytut Psychologii Zdrowia Polskiego Towarzystwa Psychologicznego";
   static const String niebieskaLiniaTitle = "Niebieska Linia";
+
+  // Knowledge Center Page Buttons Texts
+  
+
+  static const String depresionButtonName =
+      "Depresja";
+  static const String anxietyButtonName =
+      "Zaburzenia lękowe";
+  static const String ptsdButtonName =
+      "Zespół stresu pourazowego (PTSD)";
+  static const String adhdButtonName =
+      "ADHD";
+  static const String ocdButtonName = "Zaburzenia obsesyjno-kompulsyjne (OCD)";
 }

@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:projekt_zespolowy_pcz/common/styles/spacing_styles.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/niebieska_linia/niebieska_linia.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/dzieciecy_telefon/dzieciecy_telefon.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/kryzysowy_telefon_zaufania/kryzysowy_telefon_zaufania.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/telefon_dzieci_i_mlodziezy/telefon_dzieci_i_mlodziezy.dart';
-import 'package:projekt_zespolowy_pcz/features/authentication/screens/help/telefon_chat_dzieci_mlodziez/telefon_chat_dzieci_mlodziez.dart';
+import 'package:projekt_zespolowy_pcz/features/knowledge_center/screens/choroby/adhd/adhd.dart';
+import 'package:projekt_zespolowy_pcz/features/knowledge_center/screens/choroby/anxiety/anxiety.dart';
+import 'package:projekt_zespolowy_pcz/features/knowledge_center/screens/choroby/depresja/depression.dart';
+import 'package:projekt_zespolowy_pcz/features/knowledge_center/screens/choroby/ocd/ocd.dart';
+import 'package:projekt_zespolowy_pcz/features/knowledge_center/screens/choroby/ptsd/ptsd.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/image_strings.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/sizes.dart';
 import 'package:projekt_zespolowy_pcz/utils/constants/text_strings.dart';
 
-class HelpPage extends StatelessWidget {
-  const HelpPage({super.key});
+class KnowledgePage extends StatelessWidget {
+  const KnowledgePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +25,7 @@ class HelpPage extends StatelessWidget {
             children: [
               Image.asset(
                 height: 150,
-                ZenImages.helpCenterAnimation,
+                ZenImages.knowledgeCenterAnimation,
                 fit: BoxFit.cover,
               ),
               const SizedBox(
@@ -33,12 +35,9 @@ class HelpPage extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const DzieciecyTelefon()));
+                    Get.to(() => const DepressionPage());
                   },
-                  child: const Text(ZenTexts.firstCallName),
+                  child: const Text(ZenTexts.depresionButtonName),
                 ),
               ),
               const SizedBox(
@@ -48,13 +47,9 @@ class HelpPage extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                const TelefonDzieciIMlodziezy()));
+                    Get.to(() => const AnxietyPage());
                   },
-                  child: const Text(ZenTexts.secondCallName),
+                  child: const Text(ZenTexts.anxietyButtonName),
                 ),
               ),
               const SizedBox(
@@ -64,13 +59,9 @@ class HelpPage extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                const TelefonChatDzieciMlodziez()));
+                    Get.to(() => const PtsdPage());
                   },
-                  child: const Text(ZenTexts.thirdCallName),
+                  child: const Text(ZenTexts.ptsdButtonName),
                 ),
               ),
               const SizedBox(
@@ -80,13 +71,9 @@ class HelpPage extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                const KryzysowyTelefonZaufania()));
+                    Get.to(() => const AdhdPage());
                   },
-                  child: const Text(ZenTexts.fourthCallName),
+                  child: const Text(ZenTexts.adhdButtonName),
                 ),
               ),
               const SizedBox(
@@ -96,12 +83,9 @@ class HelpPage extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NiebieskaLinia()));
+                    Get.to(() => const OcdPage());
                   },
-                  child: const Text(ZenTexts.fifthCallName),
+                  child: const Text(ZenTexts.ocdButtonName),
                 ),
               ),
             ],
